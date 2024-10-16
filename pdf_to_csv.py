@@ -49,7 +49,7 @@ def call_chatgpt_to_generate_csv(pdf_text, statement_name):
         temperature=0
     )
 
-    return response.choices[0].message['content'].strip()
+    return response.choices[0].message.content.strip()
 
 # Main function to loop through all PDFs in the 'statements' folder
 def main():
